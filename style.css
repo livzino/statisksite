@@ -7,3 +7,24 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.ptekst {
+  color: grey;
+}
+
+.produktgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.produktgrid img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.prodboks {
+  border: solid rgba(128, 128, 128, 0.44);
+  padding: 20px;
+}
