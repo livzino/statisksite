@@ -1,0 +1,9 @@
+.katboks {
+  background-color: grey;
+  margin: 20px;
+  padding: 30px;
+}
+.kategorigrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
