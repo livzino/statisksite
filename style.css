@@ -1,7 +1,15 @@
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
 .katboks {
-  background-color: grey;
-  margin: 20px;
+  background-color: rgba(5, 139, 248, 0.292);
+  margin: 10px;
   padding: 30px;
+  text-align: center;
+  border-radius: 30px;
+  border: 5px solid rgba(3, 142, 248, 0.658);
 }
 .kategorigrid {
   display: grid;
@@ -23,8 +31,33 @@
   height: auto;
   margin-bottom: 10px;
 }
+.bukser2 {
+  opacity: 0.5;
+}
 
 .prodboks {
-  border: solid rgba(128, 128, 128, 0.44);
+  border: solid rgba(0, 0, 0, 0.44);
   padding: 20px;
+}
+.prodboks1 {
+  border: solid rgba(0, 0, 0, 0.44);
+  padding: 20px;
+}
+
+.produktgrid div.prodboks::before {
+  content: "Sold Out";
+  position: absolute;
+  background: white;
+  color: black;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.discount p:last-child {
+  background: red;
+  padding: 0.2rem;
+}
+.discount {
+  display: flex;
+  justify-content: space-between;
 }
