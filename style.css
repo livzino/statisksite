@@ -1,6 +1,35 @@
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgba(4, 0, 8, 0.797);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #ff037475;
+}
+body {
+  background-color: rgb(245, 241, 220);
 }
 
 .katboks {
@@ -22,30 +51,25 @@ h1 {
 
 .produktgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
 }
+article {
+  padding: 20px;
+  border: solid grey;
+}
 .produktgrid img {
-  max-width: 100%;
+  max-width: 350px;
   height: auto;
   margin-bottom: 10px;
 }
-.bukser2 {
+.bukser {
   opacity: 0.5;
 }
 
-.prodboks {
-  border: solid rgba(0, 0, 0, 0.44);
-  padding: 20px;
-}
-.prodboks1 {
-  border: solid rgba(0, 0, 0, 0.44);
-  padding: 20px;
-}
-
-.produktgrid div.prodboks::before {
-  content: "Sold Out";
+.produktgrid div.smallproduct::before {
+  content: "sold Out";
   position: absolute;
   background: white;
   color: black;
@@ -53,11 +77,17 @@ h1 {
   z-index: 1;
 }
 
-.discount p:last-child {
-  background: red;
-  padding: 0.2rem;
-}
-.discount {
+article.discounted::after {
   display: flex;
   justify-content: space-between;
+  content: "-35%";
+  background-color: red;
+  padding: 0.2rem;
+}
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: var(--color);
+  color: var(--background-color);
+  padding: 1rem;
 }
