@@ -1,4 +1,7 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("liv");
+
+fetch("https://kea-alt-del.dk/t7/api/products?limit=50&start=10&category=" + id)
   .then((res) => res.json())
   .then(showProducts);
 
@@ -16,14 +19,17 @@ function showProduct(product) {
   copy.querySelector("p.price").textContent = product.price;
 
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  copy.querySelector(".read-more").setAttribute("href", `produkt.html?id=${product.id}`);
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
   }
   if (product.discount) {
-    copy.querySelector("article").classList.add("discounted");
+    copy.querySelector("article.smallproduct").classList.add("onSale");
+    copy.querySelector("p.discounted").textContent = product.discount + "%";
   }
   document.querySelector(".produktgrid").appendChild(copy);
 }
+
 /*
 id: 1163, 
 gender: "Men", 

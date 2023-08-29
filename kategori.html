@@ -11,22 +11,25 @@
 
 <body>
     <h1>Kategorier</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="kategori.html">kategori</a></li>
+            <li><a href="produktliste.html">Produktliste</a></li>
+            <li><a href="produkt.html">Produkt</a></li>
+
+
+        </ul>
+    </nav>
     <div class="kategorigrid">
-        <div class="katboks">
-            <a href="produktliste.html">Accessories</a>
-        </div>
-        <div class="katboks">
-            <a href="produktliste.html">T-shirts</a>
-        </div>
-        <div class="katboks">
-            <a href="produktliste.html">Bukser</a>
-        </div>
-        <div class="katboks">
-            <a href="produktliste.html">Sko</a>
-        </div>
+        <template>
+            <div class="katboks">
+                <a class="acc" href="produktliste.html">Accessories</a>
+            </div>
+        </template>
     </div>
 
-
+    <script src="kategori.js"></script>
 </body>
 
 </html>

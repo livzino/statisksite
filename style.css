@@ -77,12 +77,11 @@ article {
   z-index: 1;
 }
 
-article.discounted::after {
-  display: flex;
-  justify-content: space-between;
-  content: "-35%";
-  background-color: red;
-  padding: 0.2rem;
+.disconted {
+  display: none;
+}
+article .onSale .discounted {
+  display: block;
 }
 .productlist article.soldOut::before {
   content: "Sold Out";
@@ -90,4 +89,16 @@ article.discounted::after {
   background: var(--color);
   color: var(--background-color);
   padding: 1rem;
+}
+.flex {
+  display: flex;
+  margin: 20px;
+}
+.flextekst {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.344);
+
+  padding-right: 350px;
+  margin-left: 30px;
+  border: 4px solid grey;
 }
